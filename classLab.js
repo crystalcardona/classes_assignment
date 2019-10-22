@@ -85,7 +85,7 @@ class Celsius {
         return this.celsius + 273
     }
     isBelowFreezing(){
-        if(this.celsius === freezingPoint["celsius"]){
+        if(this.celsius < freezingPoint["celsius"]){
         return true
         }
     }
@@ -135,3 +135,25 @@ class Vector {
 
 let testVector = new Vector(100, 22)
 console.log(testVector.getLength())
+
+// 7
+
+class Cylinder{
+    constructor(radius, height) {
+        this.radius = radius
+        this.height = height
+    }
+    getVolume() {
+        let pi = 3.142
+        return pi * Math.pow(this.radius, 2) * this.height
+    }
+    getSurfaceArea() {
+        let pi = 3.142
+        return (Math.pow(this.radius, 2) * pi * 2) + pi * 2 * this.radius * this.height
+    }
+}
+
+let bottle = new Cylinder(2, 7)
+console.log(bottle.getSurfaceArea())
+// console.log(bottle.getVolume())
+
