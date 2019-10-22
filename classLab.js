@@ -91,7 +91,47 @@ class Celsius {
     }
 }
 let newYork = new Celsius(5)
-console.log(newYork.getFahrenheitTemp())
+// console.log(newYork.getFahrenheitTemp())
 console.log(newYork.isBelowFreezing())
 
+// 5
 
+class Movie{
+    constructor(name, year, genre, cast, description) {
+        this.name = name
+        this.year = year
+        this.genre = genre
+        this.cast = cast
+        this.description = description
+    }
+    blurb() {
+        return "If you like " + this.genre + " you should check out " + this.name + " ." + this.name + " " + " made in " + this.year + " starring " + this.cast + " ." + this.description
+    }
+}
+
+let movie = new Movie("Unglorious Bastards", 2009, "Historical Fiction", "Brad Pitt, Christoph Waltz, Eli Roth", "A paramilitary unit hunts nazis in Nazi germany, WWII.")
+console.log(movie.blurb())
+
+// 6
+
+class Vector {
+    constructor(x, y){
+        this.x = x
+        this.y = y
+    }
+    plus(vector) {
+        let sum = 0
+        return vector += sum
+    }
+    minus(vector) {
+        let difference = 0
+        return difference = vector - vector
+    }
+    getLength() {
+        let  length = 0
+        return length = Math.pow(this.x, 2) + Math.pow(this.y, 2)
+    }
+}
+
+let testVector = new Vector(100, 22)
+console.log(testVector.getLength())
